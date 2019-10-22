@@ -1,0 +1,130 @@
+//
+$white: white;
+$red: red;
+$gray:#ddd;
+$darkgray:#aaa;
+$primary:#4C9CCE;
+$primarydark:#1E74FF;
+*{
+    padding: 0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: $white;
+    color:$red;
+    button.btn, button{
+        background: $primarydark;
+        cursor: pointer;
+        color:white;
+        border:none;
+        line-height: 30px;
+        padding:1.2px 10px;
+        border-radius:4px;
+        font-weight: bold;
+        letter-spacing: .15em;
+        margin-left:68%;
+        box-shadow: 0 0 0 4px $primarydark inset;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    input[type="text"]
+    {
+        line-height: 26px;
+        border: 2px solid $primary;
+        font-weight: bolder;
+        padding:2px 3px;
+        &:focus{
+            outline: none;
+            border-color: $primarydark;
+        }
+        &::placeholder{
+            color: $darkgray;
+        }
+    }
+
+    #searchform{
+        background: $white;
+        width:60%;
+        display: flex;
+        flex-direction: row;
+        button{
+            margin-left: -2px;
+        }
+        input{
+            min-width: 200px;
+            flex-basis:fill;
+        }
+    }
+    div
+    {
+
+        div#root{
+            .title{
+                h2{
+                    color:$primarydark;
+                    // text-transform: uppercase;
+                }
+            }
+            background:$white;
+            width:900px;
+            margin-left:24%;
+            margin-top:20px;
+            div{
+                position:relative;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding:10px;
+                margin-bottom: 20px;
+                div{
+                        max-width: 300px;
+                        width:160px;
+                        height: 160px;
+                        position: inline;
+                        margin-right:0;
+                        margin-left:2px;
+                        a{
+                            border-radius:20px;
+                            width:160px;
+                            height:160px;
+                            text-align:center;
+                            text-decoration: none;
+                            h3{
+                                color: $primary;
+                            }
+                            img{
+                                width:100px;
+                                height:100px;
+                                border-radius: 50%;
+                            }
+                        }
+                        &:hover{
+                            background: $primary;
+                            transition: background 0.3s ease-out;
+                            border-radius:10px;
+                            a{
+                                text-decoration: none;
+                                h3{
+                                    color:white;
+                                }
+                                color: $white;
+                                &:visited{
+                                    color:white;
+                                    text-decoration: none;
+                                    h3{
+                                        text-decoration: none;
+                                        color:white;
+                                    }
+                                }
+                            }
+                        }
+                }
+                
+            }
+        }
+    }
+}
